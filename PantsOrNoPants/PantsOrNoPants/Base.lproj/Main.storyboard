@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fM6-yM-6BM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fM6-yM-6BM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PantsOrNoPants" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignUpViewController" customModule="PantsOrNoPants" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -55,6 +55,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="signupSubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TJJ-BA-mLW"/>
                                     <segue destination="YIZ-OQ-2YT" kind="show" id="zH6-yb-xug"/>
                                 </connections>
                             </button>
@@ -117,10 +118,10 @@
             </objects>
             <point key="canvasLocation" x="1272" y="568"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="2Rf-nc-65w">
             <objects>
-                <viewController id="jQO-Po-2hV" sceneMemberID="viewController">
+                <viewController id="jQO-Po-2hV" customClass="SignInViewController" customModule="PantsOrNoPants" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T3L-fc-G2P"/>
                         <viewControllerLayoutGuide type="bottom" id="gCt-hE-QQU"/>
@@ -177,10 +178,10 @@
             </objects>
             <point key="canvasLocation" x="1272" y="1297"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="jeg-QZ-AGc">
             <objects>
-                <viewController id="YIZ-OQ-2YT" sceneMemberID="viewController">
+                <viewController id="YIZ-OQ-2YT" customClass="SettingsViewController" customModule="PantsOrNoPants" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tmK-ls-jrg"/>
                         <viewControllerLayoutGuide type="bottom" id="bJc-gt-JQl"/>
@@ -189,7 +190,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzm-ja-LqX">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dzm-ja-LqX">
                                 <rect key="frame" x="211" y="183" width="180" height="30"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cVm-bC-jXk">
@@ -198,10 +199,13 @@
                                             <constraint firstAttribute="width" constant="78" id="iYq-a2-3VW"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="SY9-qt-EWa">
                                         <rect key="frame" x="86" y="0.0" width="94" height="29"/>
+                                        <connections>
+                                            <action selector="changeAgeField:" destination="YIZ-OQ-2YT" eventType="valueChanged" id="zfb-L8-yby"/>
+                                        </connections>
                                     </stepper>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -214,13 +218,13 @@
                                     <constraint firstAttribute="height" constant="30" id="xaE-VM-omx"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us about you" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOU-GH-8Xl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tell us about you" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOU-GH-8Xl">
                                 <rect key="frame" x="168" y="100" width="265" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Body Mass Index" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sVn-6X-aa8">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Body Mass Index" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sVn-6X-aa8">
                                 <rect key="frame" x="210" y="259" width="180" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="d74-dP-UrD"/>
@@ -228,19 +232,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Tolerance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZu-lb-evZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Temperature Tolerance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZu-lb-evZ">
                                 <rect key="frame" x="218" y="329" width="174" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="sIt-4X-Eqv">
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="sIt-4X-Eqv">
                                 <rect key="frame" x="213" y="358" width="184" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="4DQ-C9-e6G"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="changeTempToleranceField:" destination="YIZ-OQ-2YT" eventType="valueChanged" id="MDE-bz-oNE"/>
+                                </connections>
                             </slider>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sex" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pot-C6-Zwp">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sex" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pot-C6-Zwp">
                                 <rect key="frame" x="210" y="221" width="180" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="WS4-88-WQ8"/>
@@ -248,26 +255,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I7o-9t-2Wh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I7o-9t-2Wh">
                                 <rect key="frame" x="403" y="353" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="xMz-yc-rQA"/>
                                     <constraint firstAttribute="width" constant="40" id="zED-nI-U8y"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aq3-yU-dRJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aq3-yU-dRJ">
                                 <rect key="frame" x="167" y="353" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="2NQ-c1-9q8"/>
                                     <constraint firstAttribute="height" constant="40" id="icd-8v-slX"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YlC-gD-Bhf">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YlC-gD-Bhf">
                                 <rect key="frame" x="285" y="445" width="41" height="30"/>
                                 <state key="normal" title="Finish">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="submitSettings:" destination="YIZ-OQ-2YT" eventType="touchUpInside" id="ESQ-Ik-nPx"/>
                                     <segue destination="9rn-Kh-gXb" kind="show" id="sJ7-Km-cBH"/>
                                 </connections>
                             </button>
@@ -294,15 +302,22 @@
                             <constraint firstItem="sIt-4X-Eqv" firstAttribute="centerX" secondItem="YlC-gD-Bhf" secondAttribute="centerX" constant="-0.5" id="vIL-zr-2Ue"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ageField" destination="cVm-bC-jXk" id="21u-qz-QdT"/>
+                        <outlet property="bmiField" destination="sVn-6X-aa8" id="e7n-zD-U99"/>
+                        <outlet property="getAgeField" destination="cVm-bC-jXk" id="wdP-G5-aZu"/>
+                        <outlet property="sexField" destination="Pot-C6-Zwp" id="dLd-L7-gER"/>
+                        <outlet property="tempToleranceFIeld" destination="sIt-4X-Eqv" id="Y6g-ab-8qe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zvf-FO-rFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2060" y="568"/>
         </scene>
-        <!--View Controller-->
+        <!--Pants View Controller-->
         <scene sceneID="qwL-8O-aZ2">
             <objects>
-                <viewController id="9rn-Kh-gXb" sceneMemberID="viewController">
+                <viewController id="9rn-Kh-gXb" customClass="PantsViewController" customModule="PantsOrNoPants" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TII-Hu-sIT"/>
                         <viewControllerLayoutGuide type="bottom" id="6ng-Fr-BpN"/>
@@ -349,6 +364,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="zH6-yb-xug"/>
-        <segue reference="IiE-9Y-B93"/>
+        <segue reference="sJ7-Km-cBH"/>
     </inferredMetricsTieBreakers>
 </document>
