@@ -10,24 +10,15 @@ import Foundation
 
 class RequestHandler {
 
-    func sendRequest(url: String, completionHandler handler: (NSURLResponse!, NSData!, NSError!) -> Void) {
-        let requestUrl = NSURL(string: url)
-        let request = NSURLRequest(URL: requestUrl!)
+    func sendRequest(url: String, method: String, params: [String: Any],
+        completionHandler handler: (NSURLResponse!, NSData!, NSError!) -> Void) {
+            
+        let paramString = params.stringFromHttpParameters()
+        let requestUrl = NSURL(string:"\(url)?\(paramString)")
+        let request = NSMutableURLRequest(URL: requestUrl!)
+        request.HTTPMethod = method
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: handler)
     }
-    
-//    func sendRequest(url: String, parameters: [String: AnyObject],
-//        completionHandler: ((NSData!, NSURLResponse!, NSError!) -> Void)?) {
-//        let parameterString = parameters.stringFromHttpParameters()
-//        let url = NSURL(string:"\(url)?\(parameterString)")!
-//        
-//        var request = NSMutableURLRequest(URL: url)
-//        request.HTTPMethod = "GET"
-//        
-//        let session = NSURLSession.sharedSession()
-//        let task = session.dataTaskWithRequest(request, completionHandler:completionHandler)
-//        task.resume()
-//    }
 
 }
 
@@ -44,7 +35,6 @@ extension String {
     func stringByAddingPercentEncodingForURLQueryValue() -> String? {
         let characterSet = NSMutableCharacterSet.alphanumericCharacterSet()
         characterSet.addCharactersInString("-._~")
-        
         return self.stringByAddingPercentEncodingWithAllowedCharacters(characterSet)
     }
     

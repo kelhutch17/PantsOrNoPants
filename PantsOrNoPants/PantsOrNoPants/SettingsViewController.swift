@@ -22,7 +22,8 @@ class SettingsViewController: UIViewController {
     var city: NSString!
     
     var manager: OneShotLocationManager?
-    
+    let requestHandler = RequestHandler()
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -46,9 +47,22 @@ class SettingsViewController: UIViewController {
         ageField.text = sender.value
     }
     
-
-    @IBAction func submitSettings(sender: AnyObject) {
+    func handler(response: NSURLResponse!, data: NSData!, error: NSError!) {
+        var error: NSError?
+        var dict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as! NSDictionary
         
+        print(dict)
+        print("Going to pants view")
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        var pantsViewController = mainStoryboard.instantiateViewControllerWithIdentifier("pantsView") as! PantsViewController
+        self.presentViewController(pantsViewController, animated: true, completion: nil)
+    }
+    
+    /*
+     * Make a network call to submit user settings
+     */
+    @IBAction func submitSettings(sender: AnyObject) {
+        requestHandler.sendRequest("http://freegeoip.net/json/github.com", method: "GET", params: Dictionary<String, String>(), completionHandler: handler)
     }
     
     func fetchCurrentLocation()->(CLLocationCoordinate2D?, NSError?)? {
