@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		271D24A61B5A4C2300DC3DB3 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271D24A51B5A4C2300DC3DB3 /* RequestHandler.swift */; };
+		6210CFF11B5A8DD100D5DF92 /* boxers_tiled.png in Resources */ = {isa = PBXBuildFile; fileRef = 6210CFF01B5A8DD100D5DF92 /* boxers_tiled.png */; };
 		6216FF161B5A640E005C8FEE /* boxers.png in Resources */ = {isa = PBXBuildFile; fileRef = 6216FF121B5A640E005C8FEE /* boxers.png */; };
 		6216FF171B5A640E005C8FEE /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = 6216FF131B5A640E005C8FEE /* sun.png */; };
 		6216FF181B5A640E005C8FEE /* clouds.png in Resources */ = {isa = PBXBuildFile; fileRef = 6216FF141B5A640E005C8FEE /* clouds.png */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		271D24A51B5A4C2300DC3DB3 /* RequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
+		6210CFF01B5A8DD100D5DF92 /* boxers_tiled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boxers_tiled.png; sourceTree = "<group>"; };
 		6216FF121B5A640E005C8FEE /* boxers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boxers.png; sourceTree = "<group>"; };
 		6216FF131B5A640E005C8FEE /* sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun.png; sourceTree = "<group>"; };
 		6216FF141B5A640E005C8FEE /* clouds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clouds.png; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		6216FF111B5A63F1005C8FEE /* img */ = {
 			isa = PBXGroup;
 			children = (
+				6210CFF01B5A8DD100D5DF92 /* boxers_tiled.png */,
 				6216FF121B5A640E005C8FEE /* boxers.png */,
 				6216FF131B5A640E005C8FEE /* sun.png */,
 				6216FF141B5A640E005C8FEE /* clouds.png */,
@@ -278,6 +281,7 @@
 				6235E18F1B59F5590055E746 /* LaunchScreen.xib in Resources */,
 				6216FF171B5A640E005C8FEE /* sun.png in Resources */,
 				6216FF181B5A640E005C8FEE /* clouds.png in Resources */,
+				6210CFF11B5A8DD100D5DF92 /* boxers_tiled.png in Resources */,
 				6216FF191B5A640E005C8FEE /* screen1_Grid copy 5.png in Resources */,
 				6235E18C1B59F5590055E746 /* Images.xcassets in Resources */,
 			);

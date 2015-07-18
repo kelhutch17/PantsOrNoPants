@@ -9,8 +9,6 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-    @IBOutlet weak var backgroundImage: UIImageView!
-    
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
 
@@ -18,7 +16,6 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.sendSubviewToBack(self.backgroundImage)
     }
     
     func handler(response: NSURLResponse!, data: NSData!, error: NSError!) {

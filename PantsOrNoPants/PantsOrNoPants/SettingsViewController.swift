@@ -20,8 +20,10 @@ class SettingsViewController: UIViewController {
     var currentLocation: CLLocation!
     var coord: CLLocationCoordinate2D!      // coord.latitude, coord.longitude
     var city: NSString!
-    
     var manager: OneShotLocationManager?
+    var error:NSError?
+    
+    //var manager: OneShotLocationManager?
     let requestHandler = RequestHandler()
 
     override func viewDidLoad() {
@@ -31,13 +33,13 @@ class SettingsViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        var locationErrorTuple:(CLLocationCoordinate2D?, NSError?)? = fetchCurrentLocation()
-        if let err:NSError = locationErrorTuple!.1 {
+        fetchCurrentLocation()
+        if let err:NSError = self.error {
             // Error is not nil - handle the issue
         } else {
             // Error is still nil - proceed with business logic
-            if let loc:CLLocationCoordinate2D = locationErrorTuple!.0 {
-                self.coord = loc
+            if let loc:CLLocationCoordinate2D = self.coord {
+                //self.coord = loc
                 self.city = getCityNameFromCoord(loc)
             }
         }
@@ -65,27 +67,25 @@ class SettingsViewController: UIViewController {
         requestHandler.sendRequest("http://freegeoip.net/json/github.com", method: "GET", params: Dictionary<String, String>(), completionHandler: handler)
     }
     
-    func fetchCurrentLocation()->(CLLocationCoordinate2D?, NSError?)? {
+    func fetchCurrentLocation() {
         //
         // request the current location
         //
-        manager = OneShotLocationManager()
-        var coord: CLLocationCoordinate2D!
-        var returnedError: NSError!
+        self.manager = OneShotLocationManager()
         
-        manager!.fetchWithCompletion { location, error in
+        self.manager!.fetchWithCompletion { location, error in
             // fetch location or an error
-            if let loc:CLLocation = location {
-                coord = loc.coordinate
+            if let loc = location {
+                self.coord = loc.coordinate
+                self.error = nil
             } else if let err = error {
-                coord = nil
-                returnedError = err
+                self.coord = nil
+                self.error = err
             }
             
-            // destroy the object immediately to save memory
+//            // destroy the object immediately to save memory
             self.manager = nil
         }
-        return (coord, returnedError);
     }
     
     func getCityNameFromCoord(coord: CLLocationCoordinate2D) -> NSString {

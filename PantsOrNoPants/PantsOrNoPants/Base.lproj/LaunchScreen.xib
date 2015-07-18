@@ -20,18 +20,25 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clouds.png" translatesAutoresizingMaskIntoConstraints="NO" id="mt2-sE-LVj">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="608"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO PANTS!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXt-Yj-RCI">
-                    <rect key="frame" x="97" y="110" width="286" height="50"/>
-                    <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="50"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PANTS OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jst-UL-Kp4">
                     <rect key="frame" x="107" y="45" width="266" height="50"/>
                     <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="50"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO PANTS?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXt-Yj-RCI">
+                    <rect key="frame" x="92" y="110" width="297" height="50"/>
+                    <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="50"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.png" translatesAutoresizingMaskIntoConstraints="NO" id="3qg-Mq-p1u">
+                    <rect key="frame" x="112" y="183" width="257" height="242"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="257" id="82F-BM-bwx"/>
+                        <constraint firstAttribute="height" constant="242" id="t4A-Ba-0dD"/>
+                    </constraints>
+                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boxers.png" translatesAutoresizingMaskIntoConstraints="NO" id="QZw-j8-b0V">
                     <rect key="frame" x="140" y="204" width="200" height="200"/>
                     <constraints>
@@ -45,6 +52,7 @@
                 <constraint firstItem="mt2-sE-LVj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1VU-cj-Tlx"/>
                 <constraint firstItem="mt2-sE-LVj" firstAttribute="centerX" secondItem="QZw-j8-b0V" secondAttribute="centerX" id="5bO-4j-Zmi"/>
                 <constraint firstItem="mt2-sE-LVj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9u3-5V-rVK"/>
+                <constraint firstItem="mt2-sE-LVj" firstAttribute="centerX" secondItem="3qg-Mq-p1u" secondAttribute="centerX" id="Ge4-gV-8hj"/>
                 <constraint firstAttribute="centerY" secondItem="mt2-sE-LVj" secondAttribute="centerY" id="HX7-I6-aF8"/>
                 <constraint firstItem="Jst-UL-Kp4" firstAttribute="top" secondItem="mt2-sE-LVj" secondAttribute="top" constant="45" id="Igt-g3-qYg"/>
                 <constraint firstItem="mt2-sE-LVj" firstAttribute="centerX" secondItem="Jst-UL-Kp4" secondAttribute="centerX" id="bFJ-QI-vzP"/>
@@ -53,6 +61,7 @@
                 <constraint firstAttribute="centerX" secondItem="mt2-sE-LVj" secondAttribute="centerX" id="j88-nU-Pab"/>
                 <constraint firstItem="mt2-sE-LVj" firstAttribute="centerY" secondItem="QZw-j8-b0V" secondAttribute="centerY" id="oae-Gt-3KZ"/>
                 <constraint firstItem="TXt-Yj-RCI" firstAttribute="top" secondItem="Jst-UL-Kp4" secondAttribute="bottom" constant="15" id="p2x-eG-WWf"/>
+                <constraint firstItem="mt2-sE-LVj" firstAttribute="centerY" secondItem="3qg-Mq-p1u" secondAttribute="centerY" id="r23-mJ-T85"/>
                 <constraint firstAttribute="trailing" secondItem="mt2-sE-LVj" secondAttribute="trailing" id="xb6-Yg-RsC"/>
                 <constraint firstItem="TXt-Yj-RCI" firstAttribute="top" secondItem="Jst-UL-Kp4" secondAttribute="bottom" id="zbm-1a-cYi"/>
             </constraints>
@@ -69,5 +78,6 @@
     <resources>
         <image name="boxers.png" width="552" height="388"/>
         <image name="clouds.png" width="751" height="1334"/>
+        <image name="sun.png" width="580" height="540"/>
     </resources>
 </document>

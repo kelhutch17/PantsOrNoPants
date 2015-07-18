@@ -77,12 +77,6 @@ class OneShotLocationManager: NSObject, CLLocationManagerDelegate {
         locationManager = CLLocationManager()
         locationManager!.delegate = self
         
-        //check if location services are already enabled
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager!.startUpdatingLocation()
-            return
-        }
-        
         //check for description key and ask permissions
         if (NSBundle.mainBundle().objectForInfoDictionaryKey("NSLocationWhenInUseUsageDescription") != nil) {
             locationManager!.requestWhenInUseAuthorization()
