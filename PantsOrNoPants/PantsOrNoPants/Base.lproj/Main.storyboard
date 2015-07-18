@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fM6-yM-6BM">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -18,13 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4TF-8x-9hL">
-                                <rect key="frame" x="-86" y="-79" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1q5-70-nN6">
-                                <rect key="frame" x="-65" y="-53" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -391,9 +390,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ageField" destination="cVm-bC-jXk" id="21u-qz-QdT"/>
+                        <outlet property="ageField" destination="cVm-bC-jXk" id="DZB-vf-cDf"/>
                         <outlet property="bmiField" destination="sVn-6X-aa8" id="e7n-zD-U99"/>
-                        <outlet property="getAgeField" destination="cVm-bC-jXk" id="wdP-G5-aZu"/>
                         <outlet property="sexField" destination="Pot-C6-Zwp" id="dLd-L7-gER"/>
                         <outlet property="tempToleranceFIeld" destination="sIt-4X-Eqv" id="Y6g-ab-8qe"/>
                     </connections>

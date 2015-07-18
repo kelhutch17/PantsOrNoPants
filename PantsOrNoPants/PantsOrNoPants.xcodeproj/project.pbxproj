@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		271D24A61B5A4C2300DC3DB3 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271D24A51B5A4C2300DC3DB3 /* RequestHandler.swift */; };
 		6235E1851B59F5590055E746 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6235E1841B59F5590055E746 /* AppDelegate.swift */; };
 		6235E18A1B59F5590055E746 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6235E1881B59F5590055E746 /* Main.storyboard */; };
 		6235E18C1B59F5590055E746 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6235E18B1B59F5590055E746 /* Images.xcassets */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		271D24A51B5A4C2300DC3DB3 /* RequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
 		6235E17F1B59F5590055E746 /* PantsOrNoPants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PantsOrNoPants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6235E1831B59F5590055E746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6235E1841B59F5590055E746 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				62A930891B5A2BAF0063D5CF /* SignInViewController.swift */,
 				62A9308B1B5A2BC10063D5CF /* SettingsViewController.swift */,
 				62A9308D1B5A2BD70063D5CF /* PantsViewController.swift */,
+				271D24A51B5A4C2300DC3DB3 /* RequestHandler.swift */,
 			);
 			path = PantsOrNoPants;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271D24A61B5A4C2300DC3DB3 /* RequestHandler.swift in Sources */,
 				62A9308A1B5A2BAF0063D5CF /* SignInViewController.swift in Sources */,
 				62A9308E1B5A2BD70063D5CF /* PantsViewController.swift in Sources */,
 				62A930881B5A2B840063D5CF /* SignUpViewController.swift in Sources */,
@@ -316,7 +320,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -355,7 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

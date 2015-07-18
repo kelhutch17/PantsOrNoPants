@@ -11,6 +11,7 @@ import CoreLocation
 import MapKit
 
 class SettingsViewController: UIViewController {
+
     @IBOutlet weak var ageField: UITextField!
     @IBOutlet weak var sexField: UITextField!
     @IBOutlet weak var bmiField: UITextField!
