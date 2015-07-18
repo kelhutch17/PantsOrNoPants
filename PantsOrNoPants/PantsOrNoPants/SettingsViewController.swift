@@ -154,7 +154,7 @@ class SettingsViewController: UIViewController {
                 self.error = err
             }
             
-//            // destroy the object immediately to save memory
+            // destroy the object immediately to save memory
             self.manager = nil
         }
     }

@@ -9,6 +9,7 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
+    @IBOutlet weak var fullNameField: UITextField!
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
 
@@ -23,7 +24,10 @@ class SignUpViewController: UIViewController {
         var dict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
         
         print("Saving user session")
+        print(dict)
+
         let session = NSUserDefaults.standardUserDefaults()
+        session.setObject(fullNameField.text!, forKey: "fullname")
         session.setObject(dict["username"], forKey: "username")
         session.setObject(dict["password"], forKey: "password")
         session.setObject(dict["apikey"], forKey: "apikey")
@@ -36,8 +40,8 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signupSubmit(sender: AnyObject) {
-        if usernameField.text!.isEmpty || passwordField.text!.isEmpty {
-            NSLog("Username and password cannot be empty")
+        if usernameField.text!.isEmpty || passwordField.text!.isEmpty || fullNameField.text!.isEmpty {
+            NSLog("Name and password cannot be empty")
             return
         }
         
