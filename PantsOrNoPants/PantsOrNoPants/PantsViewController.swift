@@ -31,6 +31,7 @@ class PantsViewController: UIViewController {
     ]
     
     @IBOutlet weak var pantsImage: UIImageView!
+    @IBOutlet weak var pantsLabel: UIImageView!
     @IBOutlet weak var tempLabel: UILabel!
     
     var manager: OneShotLocationManager?
@@ -39,13 +40,13 @@ class PantsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getPantsData()
-        var timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: Selector("getPantsData"), userInfo: nil, repeats: true)
+        var timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("getPantsData"), userInfo: nil, repeats: true)
     }
     
     func getPantsData() {
         let session = NSUserDefaults.standardUserDefaults()
         if let key = session.stringForKey("apikey") {
-            let params = ["apikey": key, "lat": "30.4", "lng": "40"]
+            let params = ["apikey": key, "lat": "37.386052", "lng": "-122.083851"]
             requestHandler.sendRequest("http://pants.guru:5000/api/v1/pants", method: "GET", params: params, completionHandler: handler)
         }
 
@@ -63,12 +64,12 @@ class PantsViewController: UIViewController {
         let rand: Int = Int(arc4random_uniform(UInt32(pantsArray.count)))
         if pantsbool {
             let img = Array(pantsArray.values)[rand]
-            let imageView = UIImageView(image: img)
-            pantsImage = imageView
+            pantsImage.image = img
+            pantsLabel.image = UIImage(named: "pantsbanner.png")
         } else {
             let img = Array(shortsArray.values)[rand]
-            let imageView = UIImageView(image: img)
-            pantsImage = imageView
+            pantsImage.image = img
+            pantsLabel.image = UIImage(named: "nopantsbanner.png")
         }
         
 //        print("Saving user session")
@@ -102,17 +103,6 @@ class PantsViewController: UIViewController {
             }
         }
     }
-    
-//    func createStar(num: Int) {
-//        var arrayOfImageViews = [];
-//        for (int i = 0; i < num; i++) {
-//            let imageView = UIImageView(image: UIImage(named: "star" + i))
-//            self.view.addSubview(imageView)
-//            
-//            arrayOfImageViews.insert(imageView)
-//        }
-//        return arrayOfImageViews
-//    }
     
     func fetchCurrentLocation()->(CLLocationCoordinate2D?, NSError?)? {
         //
