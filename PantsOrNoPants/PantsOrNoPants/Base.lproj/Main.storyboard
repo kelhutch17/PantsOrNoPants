@@ -752,13 +752,20 @@
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun flare_Grid copy 23.png" translatesAutoresizingMaskIntoConstraints="NO" id="sKs-Et-93j">
-                                <rect key="frame" x="97" y="152" width="400" height="400"/>
+                                <rect key="frame" x="175" y="232" width="250" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="400" id="5D7-4F-GJO"/>
-                                    <constraint firstAttribute="height" constant="400" id="5gV-t7-pJZ"/>
+                                    <constraint firstAttribute="width" constant="250" id="5D7-4F-GJO"/>
+                                    <constraint firstAttribute="height" constant="250" id="5gV-t7-pJZ"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AuY-S9-aGA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stars_Grid copy 23.png" translatesAutoresizingMaskIntoConstraints="NO" id="T1Q-Og-Y4D">
+                                <rect key="frame" x="150" y="242" width="300" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="MRo-r9-c5T"/>
+                                    <constraint firstAttribute="width" constant="300" id="keK-rk-Xk0"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AuY-S9-aGA">
                                 <rect key="frame" x="165" y="226" width="270" height="262"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="270" id="W3X-o8-U8U"/>
@@ -770,13 +777,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="QLa-MZ-sw7"/>
                                     <constraint firstAttribute="width" constant="300" id="XzZ-Hd-2lN"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stars_Grid copy 23.png" translatesAutoresizingMaskIntoConstraints="NO" id="T1Q-Og-Y4D">
-                                <rect key="frame" x="147" y="242" width="300" height="230"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="230" id="MRo-r9-c5T"/>
-                                    <constraint firstAttribute="width" constant="300" id="keK-rk-Xk0"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1QB-Mp-Wxh">
@@ -806,7 +806,7 @@
                             <constraint firstItem="We1-HF-QCA" firstAttribute="centerY" secondItem="kg9-20-8F3" secondAttribute="centerY" id="EaH-LQ-1yS"/>
                             <constraint firstItem="We1-HF-QCA" firstAttribute="centerX" secondItem="mvW-d0-SZr" secondAttribute="centerX" id="Fcf-hM-2zq"/>
                             <constraint firstItem="d4o-nE-6kU" firstAttribute="centerY" secondItem="11B-aV-6fF" secondAttribute="centerY" id="G9g-Wh-fOa"/>
-                            <constraint firstItem="sKs-Et-93j" firstAttribute="centerY" secondItem="fK5-9H-TZA" secondAttribute="centerY" constant="-5" id="HVZ-NY-hL7"/>
+                            <constraint firstItem="sKs-Et-93j" firstAttribute="centerY" secondItem="fK5-9H-TZA" secondAttribute="centerY" id="HVZ-NY-hL7"/>
                             <constraint firstItem="tkh-ri-usL" firstAttribute="centerX" secondItem="We1-HF-QCA" secondAttribute="centerX" id="IGB-MZ-0GN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="We1-HF-QCA" secondAttribute="trailing" constant="-16" id="J33-zf-hqa"/>
                             <constraint firstItem="fK5-9H-TZA" firstAttribute="top" secondItem="We1-HF-QCA" secondAttribute="bottom" id="J3T-8i-hjt"/>
@@ -821,7 +821,7 @@
                             <constraint firstItem="We1-HF-QCA" firstAttribute="leading" secondItem="d4o-nE-6kU" secondAttribute="trailing" constant="-327" id="caw-se-iMr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fK5-9H-TZA" secondAttribute="trailing" id="e4Y-8z-4Km"/>
                             <constraint firstItem="We1-HF-QCA" firstAttribute="leading" secondItem="AEw-au-96F" secondAttribute="leadingMargin" constant="-16" id="eFR-ZZ-q7u"/>
-                            <constraint firstItem="sKs-Et-93j" firstAttribute="centerX" secondItem="fK5-9H-TZA" secondAttribute="centerX" constant="-3.5" id="evY-Nw-kR0"/>
+                            <constraint firstItem="sKs-Et-93j" firstAttribute="centerX" secondItem="fK5-9H-TZA" secondAttribute="centerX" id="evY-Nw-kR0"/>
                             <constraint firstItem="11B-aV-6fF" firstAttribute="leading" secondItem="d4o-nE-6kU" secondAttribute="trailing" constant="16" id="fgT-yj-KXn"/>
                             <constraint firstItem="6ng-Fr-BpN" firstAttribute="top" secondItem="fK5-9H-TZA" secondAttribute="bottom" id="hi7-Kd-efy"/>
                             <constraint firstItem="sKs-Et-93j" firstAttribute="centerY" secondItem="kg9-20-8F3" secondAttribute="centerY" constant="189" id="irR-ow-7Nr"/>
