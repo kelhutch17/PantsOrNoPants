@@ -17,6 +17,8 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        passwordField.secureTextEntry = true
     }
     
     func handler(response: NSURLResponse!, data: NSData!, error: NSError!) {
