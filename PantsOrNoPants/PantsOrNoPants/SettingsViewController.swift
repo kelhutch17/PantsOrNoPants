@@ -14,7 +14,8 @@ class SettingsViewController: UIViewController {
 
     @IBOutlet weak var ageField: UITextField!
     @IBOutlet weak var sexField: UITextField!
-    @IBOutlet weak var bmiField: UITextField!
+    @IBOutlet weak var weightField: UITextField!
+    @IBOutlet weak var heightField: UITextField!
     @IBOutlet weak var tempToleranceFIeld: UISlider!
     
     var currentLocation: CLLocation!
@@ -26,6 +27,21 @@ class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ageField.layer.borderColor = UIColor.lightGrayColor().CGColor
+        sexField.layer.borderColor = UIColor.lightGrayColor().CGColor
+        weightField.layer.borderColor = UIColor.lightGrayColor().CGColor
+        heightField.layer.borderColor = UIColor.lightGrayColor().CGColor
+        
+        ageField.layer.cornerRadius = 0
+        sexField.layer.cornerRadius = 0
+        weightField.layer.cornerRadius = 0
+        heightField.layer.cornerRadius = 0
+        
+        ageField.frame.size.height = 50
+        sexField.frame.size.height = 50
+        weightField.frame.size.height = 50
+        heightField.frame.size.height = 50
     }
     
     override func viewDidAppear(animated: Bool) {
