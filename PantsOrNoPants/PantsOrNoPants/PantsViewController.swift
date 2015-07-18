@@ -16,10 +16,38 @@ class PantsViewController: UIViewController {
     var coord: CLLocationCoordinate2D!      // coord.latitude, coord.longitude
     
     var manager: OneShotLocationManager?
-    
+    let requestHandler = RequestHandler()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("getPantsData"), userInfo: nil, repeats: true)
     }
+    
+    func getPantsData() {
+        let session = NSUserDefaults.standardUserDefaults()
+        if let key = session.stringForKey("apikey") {
+            let params = ["apikey": key, "lat": "30.4", "lng": "40"]
+            requestHandler.sendRequest("http://pants.guru:5000/api/v1/pants", method: "GET", params: params, completionHandler: handler)
+        }
+
+    }
+    
+    func handler(response: NSURLResponse!, data: NSData!, error: NSError!) {
+        var error: NSError?
+        var dict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
+        
+//        print("Saving user session")
+//        let session = NSUserDefaults.standardUserDefaults()
+//        session.setObject(usernameField.text, forKey: "username")
+//        session.setObject(passwordField.text, forKey: "password")
+//        
+//        print(dict)
+//        print("Changing view to settings")
+//        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        var settingsViewController = mainStoryboard.instantiateViewControllerWithIdentifier("settingsView") as SettingsViewController
+//        self.presentViewController(settingsViewController, animated: true, completion: nil)
+    }
+
     
     override func viewDidAppear(animated: Bool)
     {
@@ -39,6 +67,17 @@ class PantsViewController: UIViewController {
             }
         }
     }
+    
+//    func createStar(num: Int) {
+//        var arrayOfImageViews = [];
+//        for (int i = 0; i < num; i++) {
+//            let imageView = UIImageView(image: UIImage(named: "star" + i))
+//            self.view.addSubview(imageView)
+//            
+//            arrayOfImageViews.insert(imageView)
+//        }
+//        return arrayOfImageViews
+//    }
     
     func fetchCurrentLocation()->(CLLocationCoordinate2D?, NSError?)? {
         //

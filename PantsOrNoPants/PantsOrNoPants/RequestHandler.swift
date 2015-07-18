@@ -10,7 +10,7 @@ import Foundation
 
 class RequestHandler {
 
-    func sendRequest(url: String, method: String, params: [String: Any],
+    func sendRequest(url: String, method: String, params: [String: AnyObject],
         completionHandler handler: (NSURLResponse!, NSData!, NSError!) -> Void) {
             
         let paramString = params.stringFromHttpParameters()
@@ -52,8 +52,8 @@ extension Dictionary {
     
     func stringFromHttpParameters() -> String {
         let parameterArray = map(self) { (key, value) -> String in
-            let percentEscapedKey = (key as! String).stringByAddingPercentEncodingForURLQueryValue()!
-            let percentEscapedValue = (value as! String).stringByAddingPercentEncodingForURLQueryValue()!
+            let percentEscapedKey = (key as String).stringByAddingPercentEncodingForURLQueryValue()!
+            let percentEscapedValue = (value as String).stringByAddingPercentEncodingForURLQueryValue()!
             return "\(percentEscapedKey)=\(percentEscapedValue)"
         }
         
