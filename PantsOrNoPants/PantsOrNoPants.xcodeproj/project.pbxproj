@@ -21,6 +21,8 @@
 		6235E18C1B59F5590055E746 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6235E18B1B59F5590055E746 /* Images.xcassets */; };
 		6235E18F1B59F5590055E746 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6235E18D1B59F5590055E746 /* LaunchScreen.xib */; };
 		6235E19B1B59F5590055E746 /* PantsOrNoPantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6235E19A1B59F5590055E746 /* PantsOrNoPantsTests.swift */; };
+		627763871B5AC56B00CE2CA2 /* appicon-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 627763861B5AC56B00CE2CA2 /* appicon-24.png */; };
+		627763891B5AC83700CE2CA2 /* background_Grid copy 12.png in Resources */ = {isa = PBXBuildFile; fileRef = 627763881B5AC83700CE2CA2 /* background_Grid copy 12.png */; };
 		62A930821B5A0AC80063D5CF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A930811B5A0AC80063D5CF /* CoreLocation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		62A930861B5A1C2D0063D5CF /* OneShotLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A930851B5A1C2D0063D5CF /* OneShotLocationManager.swift */; };
 		62A930881B5A2B840063D5CF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A930871B5A2B840063D5CF /* SignUpViewController.swift */; };
@@ -65,6 +67,8 @@
 		6235E1941B59F5590055E746 /* PantsOrNoPantsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PantsOrNoPantsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6235E1991B59F5590055E746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6235E19A1B59F5590055E746 /* PantsOrNoPantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantsOrNoPantsTests.swift; sourceTree = "<group>"; };
+		627763861B5AC56B00CE2CA2 /* appicon-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-24.png"; sourceTree = "<group>"; };
+		627763881B5AC83700CE2CA2 /* background_Grid copy 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_Grid copy 12.png"; sourceTree = "<group>"; };
 		62A930811B5A0AC80063D5CF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		62A930851B5A1C2D0063D5CF /* OneShotLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneShotLocationManager.swift; sourceTree = "<group>"; };
 		62A930871B5A2B840063D5CF /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 		6216FF111B5A63F1005C8FEE /* img */ = {
 			isa = PBXGroup;
 			children = (
+				627763881B5AC83700CE2CA2 /* background_Grid copy 12.png */,
+				627763861B5AC56B00CE2CA2 /* appicon-24.png */,
 				278333831B5AB4430022076B /* illustrationssettings-25.png */,
 				278333841B5AB4430022076B /* illustrationssettings-26.png */,
 				278333851B5AB4430022076B /* illustrationssettings-27.png */,
@@ -284,6 +290,7 @@
 				278333881B5AB4430022076B /* illustrationssettings-27.png in Resources */,
 				62A930981B5A5C090063D5CF /* GothamRnd-MedIta.otf in Resources */,
 				62A930991B5A5C090063D5CF /* GothamRnd-LightIta.otf in Resources */,
+				627763871B5AC56B00CE2CA2 /* appicon-24.png in Resources */,
 				62A9309A1B5A5C090063D5CF /* GothamRnd-Light.otf in Resources */,
 				278333871B5AB4430022076B /* illustrationssettings-26.png in Resources */,
 				62A9309B1B5A5C090063D5CF /* GothamRnd-BookIta.otf in Resources */,
@@ -294,6 +301,7 @@
 				6216FF171B5A640E005C8FEE /* sun.png in Resources */,
 				6216FF181B5A640E005C8FEE /* clouds.png in Resources */,
 				6210CFF11B5A8DD100D5DF92 /* boxers_tiled.png in Resources */,
+				627763891B5AC83700CE2CA2 /* background_Grid copy 12.png in Resources */,
 				6216FF191B5A640E005C8FEE /* screen1_Grid copy 5.png in Resources */,
 				6235E18C1B59F5590055E746 /* Images.xcassets in Resources */,
 			);

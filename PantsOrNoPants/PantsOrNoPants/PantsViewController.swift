@@ -34,7 +34,7 @@ class PantsViewController: UIViewController {
     
     func handler(response: NSURLResponse!, data: NSData!, error: NSError!) {
         var error: NSError?
-        var dict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
+        var dict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as! NSDictionary
         
 //        print("Saving user session")
 //        let session = NSUserDefaults.standardUserDefaults()

@@ -13,11 +13,13 @@ import MapKit
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var ageField: UITextField!
-    @IBOutlet weak var sexField: UITextField!
     @IBOutlet weak var weightField: UITextField!
     @IBOutlet weak var heightField: UITextField!
     @IBOutlet weak var tempToleranceFIeld: UISlider!
-    @IBOutlet weak var languageFIeld: UITextField!
+    @IBOutlet weak var sexSegmentedCtrl: UISegmentedControl!
+    @IBOutlet weak var languageSegmentedControl: UISegmentedControl!
+    
+    var languageCode:NSString! = "en"
     
     let stepValue: Float = 1.0
 
@@ -34,19 +36,16 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         
         ageField.layer.borderColor = UIColor.lightGrayColor().CGColor
-        sexField.layer.borderColor = UIColor.lightGrayColor().CGColor
         weightField.layer.borderColor = UIColor.lightGrayColor().CGColor
         heightField.layer.borderColor = UIColor.lightGrayColor().CGColor
+
+        ageField.borderStyle = UITextBorderStyle.Line
+        weightField.borderStyle = UITextBorderStyle.Line
+        heightField.borderStyle = UITextBorderStyle.Line
         
-        ageField.layer.cornerRadius = 0
-        sexField.layer.cornerRadius = 0
-        weightField.layer.cornerRadius = 0
-        heightField.layer.cornerRadius = 0
-        
-        ageField.frame.size.height = 50
-        sexField.frame.size.height = 50
-        weightField.frame.size.height = 50
-        heightField.frame.size.height = 50
+//        ageField = UITextField(frame: CGRectMake(ageField.frame.origin.x, ageField.frame.origin.y, ageField.bounds.width, 40.0))
+//        weightField = UITextField(frame:CGRectMake(weightField.frame.origin.x, weightField.frame.origin.y, weightField.bounds.width, 40.0))
+//        heightField = UITextField(frame: CGRectMake(heightField.frame.origin.x, heightField.frame.origin.y, heightField.bounds.width, 40.0))
     }
     
     // Implement snapping for the slider
@@ -74,18 +73,35 @@ class SettingsViewController: UIViewController {
         }
     }
     
-    @IBAction func changeAgeField(sender: AnyObject) {
-        ageField.text = sender.value
+
+    @IBAction func segmentedCtrlChanged(sender: AnyObject) {
+    }
+    
+    @IBAction func languageChanged(sender: AnyObject) {
+        if let sc:UISegmentedControl = sender as? UISegmentedControl
+        {
+            switch sc.selectedSegmentIndex
+            {
+            case 0:
+                languageCode = "en"
+            case 1:
+                languageCode = "es"
+            case 2:
+                languageCode = "it"
+            default:
+                languageCode = "en"
+            }
+        }
     }
     
     func handler(response: NSURLResponse!, data: NSData!, error: NSError!) {
         var error: NSError?
-        var dict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
+        var dict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as! NSDictionary
         
         print(dict)
         print("Going to pants view")
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        var pantsViewController = mainStoryboard.instantiateViewControllerWithIdentifier("pantsView") as PantsViewController
+        var pantsViewController = mainStoryboard.instantiateViewControllerWithIdentifier("pantsView") as!PantsViewController
         self.presentViewController(pantsViewController, animated: true, completion: nil)
     }
     
@@ -119,16 +135,16 @@ class SettingsViewController: UIViewController {
         if !weightField.text.isEmpty {
             params["weight"] = weightField.text
         }
-        if !sexField.text.isEmpty {
-            params["gender"] = sexField.text
+        
+        params["gender"] = sexSegmentedCtrl.selectedSegmentIndex.description
+        
+        if let lc:NSString = languageCode {
+            params["lang"] = lc as String
         }
-        if !languageFIeld.text.isEmpty {
-            params["lang"] = languageFIeld.text
-        }
-        var inclination = getInclinationText(tempToleranceFIeld.value)
-        if !inclination.isEmpty {
-            params["inclination"] = inclination
-        }
+//        var inclination = getInclinationText(tempToleranceFIeld.value)
+//        if !inclination.isEmpty {
+//            params["inclination"] = inclination
+//        }
         
         requestHandler.sendRequest("http://pants.guru:5000/api/v1/users/" + userid, method: "PUT", params: params, completionHandler: handler)
     }
