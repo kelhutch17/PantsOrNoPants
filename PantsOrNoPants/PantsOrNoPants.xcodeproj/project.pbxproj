@@ -90,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				6235E1841B59F5590055E746 /* AppDelegate.swift */,
-				6235E1881B59F5590055E746 /* Main.storyboard */,
 				6235E18B1B59F5590055E746 /* Images.xcassets */,
 				6235E18D1B59F5590055E746 /* LaunchScreen.xib */,
 				6235E1821B59F5590055E746 /* Supporting Files */,
@@ -99,6 +98,7 @@
 				62A930891B5A2BAF0063D5CF /* SignInViewController.swift */,
 				62A9308B1B5A2BC10063D5CF /* SettingsViewController.swift */,
 				62A9308D1B5A2BD70063D5CF /* PantsViewController.swift */,
+				6235E1881B59F5590055E746 /* Main.storyboard */,
 			);
 			path = PantsOrNoPants;
 			sourceTree = "<group>";
