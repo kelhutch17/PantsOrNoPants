@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fM6-yM-6BM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fM6-yM-6BM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -50,7 +51,6 @@
                                 </state>
                                 <connections>
                                     <action selector="signupSubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TJJ-BA-mLW"/>
-                                    <segue destination="YIZ-OQ-2YT" kind="show" id="zH6-yb-xug"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u9h-Db-FYx">
@@ -117,6 +117,10 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="6Fl-vU-cuN"/>
+                    <connections>
+                        <outlet property="passwordField" destination="X3t-J6-hYC" id="Qrg-02-y4p"/>
+                        <outlet property="usernameField" destination="u9h-Db-FYx" id="4T3-Kn-YqB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -267,12 +271,12 @@
         <!--Settings View Controller-->
         <scene sceneID="jeg-QZ-AGc">
             <objects>
-                <viewController id="YIZ-OQ-2YT" customClass="SettingsViewController" customModule="PantsOrNoPants" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settingsView" id="YIZ-OQ-2YT" customClass="SettingsViewController" customModule="PantsOrNoPants" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tmK-ls-jrg"/>
                         <viewControllerLayoutGuide type="bottom" id="bJc-gt-JQl"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Twd-e0-Ftu">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="settingsView" id="Twd-e0-Ftu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -362,7 +366,6 @@
                                 </state>
                                 <connections>
                                     <action selector="submitSettings:" destination="YIZ-OQ-2YT" eventType="touchUpInside" id="ESQ-Ik-nPx"/>
-                                    <segue destination="9rn-Kh-gXb" kind="show" id="sJ7-Km-cBH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -397,12 +400,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zvf-FO-rFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2060" y="568"/>
+            <point key="canvasLocation" x="2030" y="568"/>
         </scene>
         <!--Pants View Controller-->
         <scene sceneID="qwL-8O-aZ2">
             <objects>
-                <viewController id="9rn-Kh-gXb" customClass="PantsViewController" customModule="PantsOrNoPants" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="pantsView" id="9rn-Kh-gXb" customClass="PantsViewController" customModule="PantsOrNoPants" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TII-Hu-sIT"/>
                         <viewControllerLayoutGuide type="bottom" id="6ng-Fr-BpN"/>
@@ -447,8 +450,4 @@
             <point key="canvasLocation" x="462" y="568"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="zH6-yb-xug"/>
-        <segue reference="sJ7-Km-cBH"/>
-    </inferredMetricsTieBreakers>
 </document>
