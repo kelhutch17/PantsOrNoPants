@@ -14,13 +14,32 @@ class PantsViewController: UIViewController {
     
     var currentLocation: CLLocation!
     var coord: CLLocationCoordinate2D!      // coord.latitude, coord.longitude
+    var pantsArray = [
+        "pants1": UIImage(named: "pants1.png"),
+        "pants2": UIImage(named: "pants2.png"),
+        "pants3": UIImage(named: "pants3.png"),
+        "pants4": UIImage(named: "pants4.png"),
+        "pants5": UIImage(named: "pants5.png"),
+    ]
+    
+    var shortsArray = [
+        "shorts1": UIImage(named: "shorts1.png"),
+        "shorts2": UIImage(named: "shorts2.png"),
+        "shorts3": UIImage(named: "shorts3.png"),
+        "shorts4": UIImage(named: "shorts4.png"),
+        "shorts5": UIImage(named: "shorts5.png")
+    ]
+    
+    @IBOutlet weak var pantsImage: UIImageView!
+    @IBOutlet weak var tempLabel: UILabel!
     
     var manager: OneShotLocationManager?
     let requestHandler = RequestHandler()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("getPantsData"), userInfo: nil, repeats: true)
+        getPantsData()
+        var timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: Selector("getPantsData"), userInfo: nil, repeats: true)
     }
     
     func getPantsData() {
@@ -35,6 +54,22 @@ class PantsViewController: UIViewController {
     func handler(response: NSURLResponse!, data: NSData!, error: NSError!) {
         var error: NSError?
         var dict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
+        
+        print(dict)
+        let pantsbool: Bool = (dict["pornp"] as Int) == 1
+        let temp = dict.objectForKey("current_temp")!.description
+        tempLabel.text = temp
+        
+        let rand: Int = Int(arc4random_uniform(UInt32(pantsArray.count)))
+        if pantsbool {
+            let img = Array(pantsArray.values)[rand]
+            let imageView = UIImageView(image: img)
+            pantsImage = imageView
+        } else {
+            let img = Array(shortsArray.values)[rand]
+            let imageView = UIImageView(image: img)
+            pantsImage = imageView
+        }
         
 //        print("Saving user session")
 //        let session = NSUserDefaults.standardUserDefaults()
