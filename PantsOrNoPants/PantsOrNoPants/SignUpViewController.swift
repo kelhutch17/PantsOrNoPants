@@ -10,6 +10,16 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     
+    let requestHandler = RequestHandler()
+    
+    func handler(response: NSURLResponse!, data: NSData!, error: NSError!) {
+
+    }
+    
+    @IBAction func signupSubmit(sender: AnyObject) {
+        requestHandler.sendRequest("hi", handler)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

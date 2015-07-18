@@ -11,6 +11,10 @@ import CoreLocation
 import MapKit
 
 class SettingsViewController: UIViewController {
+    @IBOutlet weak var ageField: UITextField!
+    @IBOutlet weak var sexField: UITextField!
+    @IBOutlet weak var bmiField: UITextField!
+    @IBOutlet weak var tempToleranceFIeld: UISlider!
     
     var currentLocation: CLLocation!
     var coord: CLLocationCoordinate2D!      // coord.latitude, coord.longitude
@@ -35,6 +39,15 @@ class SettingsViewController: UIViewController {
                 self.city = getCityNameFromCoord(loc)
             }
         }
+    }
+    
+    @IBAction func changeAgeField(sender: AnyObject) {
+        ageField.text = sender.value
+    }
+    
+
+    @IBAction func submitSettings(sender: AnyObject) {
+        
     }
     
     func fetchCurrentLocation()->(CLLocationCoordinate2D?, NSError?)? {
