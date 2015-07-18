@@ -16,8 +16,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var weightField: UITextField!
     @IBOutlet weak var heightField: UITextField!
     @IBOutlet weak var tempToleranceFIeld: UISlider!
-    @IBOutlet weak var sexSegmentedCtrl: UISegmentedControl!
-    @IBOutlet weak var languageSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var languageField: UITextField!
+    @IBOutlet weak var sexField: UITextField!
     
     var languageCode:NSString! = "en"
     
@@ -35,13 +35,13 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ageField.layer.borderColor = UIColor.lightGrayColor().CGColor
-        weightField.layer.borderColor = UIColor.lightGrayColor().CGColor
-        heightField.layer.borderColor = UIColor.lightGrayColor().CGColor
-
-        ageField.borderStyle = UITextBorderStyle.Line
-        weightField.borderStyle = UITextBorderStyle.Line
-        heightField.borderStyle = UITextBorderStyle.Line
+//        ageField.layer.borderColor = UIColor.lightGrayColor().CGColor
+//        weightField.layer.borderColor = UIColor.lightGrayColor().CGColor
+//        heightField.layer.borderColor = UIColor.lightGrayColor().CGColor
+//
+//        ageField.borderStyle = UITextBorderStyle.Line
+//        weightField.borderStyle = UITextBorderStyle.Line
+//        heightField.borderStyle = UITextBorderStyle.Line
         
 //        ageField = UITextField(frame: CGRectMake(ageField.frame.origin.x, ageField.frame.origin.y, ageField.bounds.width, 40.0))
 //        weightField = UITextField(frame:CGRectMake(weightField.frame.origin.x, weightField.frame.origin.y, weightField.bounds.width, 40.0))
@@ -74,34 +74,34 @@ class SettingsViewController: UIViewController {
     }
     
 
-    @IBAction func segmentedCtrlChanged(sender: AnyObject) {
-    }
-    
-    @IBAction func languageChanged(sender: AnyObject) {
-        if let sc:UISegmentedControl = sender as? UISegmentedControl
-        {
-            switch sc.selectedSegmentIndex
-            {
-            case 0:
-                languageCode = "en"
-            case 1:
-                languageCode = "es"
-            case 2:
-                languageCode = "it"
-            default:
-                languageCode = "en"
-            }
-        }
-    }
+//    @IBAction func segmentedCtrlChanged(sender: AnyObject) {
+//    }
+//    
+//    @IBAction func languageChanged(sender: AnyObject) {
+//        if let sc:UISegmentedControl = sender as? UISegmentedControl
+//        {
+//            switch sc.selectedSegmentIndex
+//            {
+//            case 0:
+//                languageCode = "en"
+//            case 1:
+//                languageCode = "es"
+//            case 2:
+//                languageCode = "it"
+//            default:
+//                languageCode = "en"
+//            }
+//        }
+//    }
     
     func handler(response: NSURLResponse!, data: NSData!, error: NSError!) {
         var error: NSError?
-        var dict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as! NSDictionary
+        var dict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
         
         print(dict)
         print("Going to pants view")
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        var pantsViewController = mainStoryboard.instantiateViewControllerWithIdentifier("pantsView") as!PantsViewController
+        var pantsViewController = mainStoryboard.instantiateViewControllerWithIdentifier("pantsView") as PantsViewController
         self.presentViewController(pantsViewController, animated: true, completion: nil)
     }
     
@@ -136,11 +136,11 @@ class SettingsViewController: UIViewController {
             params["weight"] = weightField.text
         }
         
-        params["gender"] = sexSegmentedCtrl.selectedSegmentIndex.description
+//        params["gender"] = sexSegmentedCtrl.selectedSegmentIndex.description
         
-        if let lc:NSString = languageCode {
-            params["lang"] = lc as String
-        }
+//        if let lc:NSString = languageCode {
+//            params["lang"] = lc as String
+//        }
 //        var inclination = getInclinationText(tempToleranceFIeld.value)
 //        if !inclination.isEmpty {
 //            params["inclination"] = inclination

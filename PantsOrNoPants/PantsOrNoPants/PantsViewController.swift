@@ -54,7 +54,7 @@ class PantsViewController: UIViewController {
     
     func handler(response: NSURLResponse!, data: NSData!, error: NSError!) {
         var error: NSError?
-        var dict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as! NSDictionary
+        var dict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
         
         print(dict)
         let pantsbool: Bool = (dict["pornp"] as Int) == 1

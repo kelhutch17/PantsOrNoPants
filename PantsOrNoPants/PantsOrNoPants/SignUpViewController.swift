@@ -22,7 +22,7 @@ class SignUpViewController: UIViewController {
     
     func handler(response: NSURLResponse!, data: NSData!, error: NSError!) {
         var error: NSError?
-        var dict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as! NSDictionary
+        var dict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
         
         print("Saving user session")
         print(dict)
@@ -36,7 +36,7 @@ class SignUpViewController: UIViewController {
 
         print("Changing view to settings")
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        var settingsViewController = mainStoryboard.instantiateViewControllerWithIdentifier("settingsView") as! SettingsViewController
+        var settingsViewController = mainStoryboard.instantiateViewControllerWithIdentifier("settingsView") as SettingsViewController
         self.presentViewController(settingsViewController, animated: true, completion: nil)
     }
     
