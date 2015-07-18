@@ -8,11 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		6235E1851B59F5590055E746 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6235E1841B59F5590055E746 /* AppDelegate.swift */; };
-		6235E1871B59F5590055E746 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6235E1861B59F5590055E746 /* ViewController.swift */; };
 		6235E18A1B59F5590055E746 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6235E1881B59F5590055E746 /* Main.storyboard */; };
 		6235E18C1B59F5590055E746 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6235E18B1B59F5590055E746 /* Images.xcassets */; };
 		6235E18F1B59F5590055E746 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6235E18D1B59F5590055E746 /* LaunchScreen.xib */; };
 		6235E19B1B59F5590055E746 /* PantsOrNoPantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6235E19A1B59F5590055E746 /* PantsOrNoPantsTests.swift */; };
+		62A930821B5A0AC80063D5CF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A930811B5A0AC80063D5CF /* CoreLocation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		62A930861B5A1C2D0063D5CF /* OneShotLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A930851B5A1C2D0063D5CF /* OneShotLocationManager.swift */; };
+		62A930881B5A2B840063D5CF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A930871B5A2B840063D5CF /* SignUpViewController.swift */; };
+		62A9308A1B5A2BAF0063D5CF /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A930891B5A2BAF0063D5CF /* SignInViewController.swift */; };
+		62A9308C1B5A2BC10063D5CF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A9308B1B5A2BC10063D5CF /* SettingsViewController.swift */; };
+		62A9308E1B5A2BD70063D5CF /* PantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A9308D1B5A2BD70063D5CF /* PantsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +34,18 @@
 		6235E17F1B59F5590055E746 /* PantsOrNoPants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PantsOrNoPants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6235E1831B59F5590055E746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6235E1841B59F5590055E746 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6235E1861B59F5590055E746 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6235E1891B59F5590055E746 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6235E18B1B59F5590055E746 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6235E18E1B59F5590055E746 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6235E1941B59F5590055E746 /* PantsOrNoPantsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PantsOrNoPantsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6235E1991B59F5590055E746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6235E19A1B59F5590055E746 /* PantsOrNoPantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantsOrNoPantsTests.swift; sourceTree = "<group>"; };
+		62A930811B5A0AC80063D5CF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		62A930851B5A1C2D0063D5CF /* OneShotLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneShotLocationManager.swift; sourceTree = "<group>"; };
+		62A930871B5A2B840063D5CF /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		62A930891B5A2BAF0063D5CF /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		62A9308B1B5A2BC10063D5CF /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		62A9308D1B5A2BD70063D5CF /* PantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PantsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62A930821B5A0AC80063D5CF /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +70,7 @@
 		6235E1761B59F5590055E746 = {
 			isa = PBXGroup;
 			children = (
+				62A930811B5A0AC80063D5CF /* CoreLocation.framework */,
 				6235E1811B59F5590055E746 /* PantsOrNoPants */,
 				6235E1971B59F5590055E746 /* PantsOrNoPantsTests */,
 				6235E1801B59F5590055E746 /* Products */,
@@ -78,11 +90,15 @@
 			isa = PBXGroup;
 			children = (
 				6235E1841B59F5590055E746 /* AppDelegate.swift */,
-				6235E1861B59F5590055E746 /* ViewController.swift */,
 				6235E1881B59F5590055E746 /* Main.storyboard */,
 				6235E18B1B59F5590055E746 /* Images.xcassets */,
 				6235E18D1B59F5590055E746 /* LaunchScreen.xib */,
 				6235E1821B59F5590055E746 /* Supporting Files */,
+				62A930851B5A1C2D0063D5CF /* OneShotLocationManager.swift */,
+				62A930871B5A2B840063D5CF /* SignUpViewController.swift */,
+				62A930891B5A2BAF0063D5CF /* SignInViewController.swift */,
+				62A9308B1B5A2BC10063D5CF /* SettingsViewController.swift */,
+				62A9308D1B5A2BD70063D5CF /* PantsViewController.swift */,
 			);
 			path = PantsOrNoPants;
 			sourceTree = "<group>";
@@ -161,6 +177,11 @@
 				TargetAttributes = {
 					6235E17E1B59F5590055E746 = {
 						CreatedOnToolsVersion = 6.3.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					6235E1931B59F5590055E746 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -212,8 +233,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6235E1871B59F5590055E746 /* ViewController.swift in Sources */,
+				62A9308A1B5A2BAF0063D5CF /* SignInViewController.swift in Sources */,
+				62A9308E1B5A2BD70063D5CF /* PantsViewController.swift in Sources */,
+				62A930881B5A2B840063D5CF /* SignUpViewController.swift in Sources */,
 				6235E1851B59F5590055E746 /* AppDelegate.swift in Sources */,
+				62A9308C1B5A2BC10063D5CF /* SettingsViewController.swift in Sources */,
+				62A930861B5A1C2D0063D5CF /* OneShotLocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +436,7 @@
 				6235E1A01B59F5590055E746 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6235E1A11B59F5590055E746 /* Build configuration list for PBXNativeTarget "PantsOrNoPantsTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +445,7 @@
 				6235E1A31B59F5590055E746 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
