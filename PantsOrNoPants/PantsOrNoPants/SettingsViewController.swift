@@ -65,12 +65,12 @@ class SettingsViewController: UIViewController {
     
     func handler(response: NSURLResponse!, data: NSData!, error: NSError!) {
         var error: NSError?
-        var dict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
+        var dict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as! NSDictionary
         
         print(dict)
         print("Going to pants view")
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        var pantsViewController = mainStoryboard.instantiateViewControllerWithIdentifier("pantsView") as PantsViewController
+        var pantsViewController = mainStoryboard.instantiateViewControllerWithIdentifier("pantsView") as! PantsViewController
         self.presentViewController(pantsViewController, animated: true, completion: nil)
     }
     

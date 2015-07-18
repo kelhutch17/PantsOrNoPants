@@ -24,6 +24,16 @@
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We need your location to evaluate your local weather conditions</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>GothamRnd-Medium.otf</string>
+		<string>GothamRnd-MedIta.otf</string>
+		<string>GothamRnd-LightIta.otf</string>
+		<string>GothamRnd-Light.otf</string>
+		<string>GothamRnd-BookIta.otf</string>
+		<string>GothamRnd-Book.otf</string>
+		<string>GothamRnd-Bold.otf</string>
+	</array>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
@@ -39,8 +49,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

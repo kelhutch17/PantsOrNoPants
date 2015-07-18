@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		271D24A61B5A4C2300DC3DB3 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271D24A51B5A4C2300DC3DB3 /* RequestHandler.swift */; };
+		6216FF161B5A640E005C8FEE /* boxers.png in Resources */ = {isa = PBXBuildFile; fileRef = 6216FF121B5A640E005C8FEE /* boxers.png */; };
+		6216FF171B5A640E005C8FEE /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = 6216FF131B5A640E005C8FEE /* sun.png */; };
+		6216FF181B5A640E005C8FEE /* clouds.png in Resources */ = {isa = PBXBuildFile; fileRef = 6216FF141B5A640E005C8FEE /* clouds.png */; };
+		6216FF191B5A640E005C8FEE /* screen1_Grid copy 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 6216FF151B5A640E005C8FEE /* screen1_Grid copy 5.png */; };
 		6235E1851B59F5590055E746 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6235E1841B59F5590055E746 /* AppDelegate.swift */; };
 		6235E18A1B59F5590055E746 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6235E1881B59F5590055E746 /* Main.storyboard */; };
 		6235E18C1B59F5590055E746 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6235E18B1B59F5590055E746 /* Images.xcassets */; };
@@ -19,6 +23,13 @@
 		62A9308A1B5A2BAF0063D5CF /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A930891B5A2BAF0063D5CF /* SignInViewController.swift */; };
 		62A9308C1B5A2BC10063D5CF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A9308B1B5A2BC10063D5CF /* SettingsViewController.swift */; };
 		62A9308E1B5A2BD70063D5CF /* PantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A9308D1B5A2BD70063D5CF /* PantsViewController.swift */; };
+		62A930971B5A5C090063D5CF /* GothamRnd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62A930901B5A5AF80063D5CF /* GothamRnd-Medium.otf */; };
+		62A930981B5A5C090063D5CF /* GothamRnd-MedIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62A930911B5A5AF80063D5CF /* GothamRnd-MedIta.otf */; };
+		62A930991B5A5C090063D5CF /* GothamRnd-LightIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62A930921B5A5AF80063D5CF /* GothamRnd-LightIta.otf */; };
+		62A9309A1B5A5C090063D5CF /* GothamRnd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62A930931B5A5AF80063D5CF /* GothamRnd-Light.otf */; };
+		62A9309B1B5A5C090063D5CF /* GothamRnd-BookIta.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62A930941B5A5AF80063D5CF /* GothamRnd-BookIta.otf */; };
+		62A9309C1B5A5C090063D5CF /* GothamRnd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62A930951B5A5AF80063D5CF /* GothamRnd-Book.otf */; };
+		62A9309D1B5A5C090063D5CF /* GothamRnd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62A930961B5A5AF80063D5CF /* GothamRnd-Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +44,10 @@
 
 /* Begin PBXFileReference section */
 		271D24A51B5A4C2300DC3DB3 /* RequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
+		6216FF121B5A640E005C8FEE /* boxers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boxers.png; sourceTree = "<group>"; };
+		6216FF131B5A640E005C8FEE /* sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun.png; sourceTree = "<group>"; };
+		6216FF141B5A640E005C8FEE /* clouds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clouds.png; sourceTree = "<group>"; };
+		6216FF151B5A640E005C8FEE /* screen1_Grid copy 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screen1_Grid copy 5.png"; sourceTree = "<group>"; };
 		6235E17F1B59F5590055E746 /* PantsOrNoPants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PantsOrNoPants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6235E1831B59F5590055E746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6235E1841B59F5590055E746 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +63,13 @@
 		62A930891B5A2BAF0063D5CF /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		62A9308B1B5A2BC10063D5CF /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		62A9308D1B5A2BD70063D5CF /* PantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PantsViewController.swift; sourceTree = "<group>"; };
+		62A930901B5A5AF80063D5CF /* GothamRnd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-Medium.otf"; sourceTree = "<group>"; };
+		62A930911B5A5AF80063D5CF /* GothamRnd-MedIta.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-MedIta.otf"; sourceTree = "<group>"; };
+		62A930921B5A5AF80063D5CF /* GothamRnd-LightIta.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-LightIta.otf"; sourceTree = "<group>"; };
+		62A930931B5A5AF80063D5CF /* GothamRnd-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-Light.otf"; sourceTree = "<group>"; };
+		62A930941B5A5AF80063D5CF /* GothamRnd-BookIta.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-BookIta.otf"; sourceTree = "<group>"; };
+		62A930951B5A5AF80063D5CF /* GothamRnd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-Book.otf"; sourceTree = "<group>"; };
+		62A930961B5A5AF80063D5CF /* GothamRnd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRnd-Bold.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +91,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6216FF111B5A63F1005C8FEE /* img */ = {
+			isa = PBXGroup;
+			children = (
+				6216FF121B5A640E005C8FEE /* boxers.png */,
+				6216FF131B5A640E005C8FEE /* sun.png */,
+				6216FF141B5A640E005C8FEE /* clouds.png */,
+				6216FF151B5A640E005C8FEE /* screen1_Grid copy 5.png */,
+			);
+			name = img;
+			sourceTree = "<group>";
+		};
 		6235E1761B59F5590055E746 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +142,8 @@
 		6235E1821B59F5590055E746 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6216FF111B5A63F1005C8FEE /* img */,
+				62A9308F1B5A5AE70063D5CF /* Fonts */,
 				6235E1831B59F5590055E746 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -129,6 +164,20 @@
 				6235E1991B59F5590055E746 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		62A9308F1B5A5AE70063D5CF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				62A930901B5A5AF80063D5CF /* GothamRnd-Medium.otf */,
+				62A930911B5A5AF80063D5CF /* GothamRnd-MedIta.otf */,
+				62A930921B5A5AF80063D5CF /* GothamRnd-LightIta.otf */,
+				62A930931B5A5AF80063D5CF /* GothamRnd-Light.otf */,
+				62A930941B5A5AF80063D5CF /* GothamRnd-BookIta.otf */,
+				62A930951B5A5AF80063D5CF /* GothamRnd-Book.otf */,
+				62A930961B5A5AF80063D5CF /* GothamRnd-Bold.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +229,7 @@
 				TargetAttributes = {
 					6235E17E1B59F5590055E746 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = L38GWSMVUV;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -216,8 +266,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6216FF161B5A640E005C8FEE /* boxers.png in Resources */,
+				62A930971B5A5C090063D5CF /* GothamRnd-Medium.otf in Resources */,
+				62A930981B5A5C090063D5CF /* GothamRnd-MedIta.otf in Resources */,
+				62A930991B5A5C090063D5CF /* GothamRnd-LightIta.otf in Resources */,
+				62A9309A1B5A5C090063D5CF /* GothamRnd-Light.otf in Resources */,
+				62A9309B1B5A5C090063D5CF /* GothamRnd-BookIta.otf in Resources */,
+				62A9309C1B5A5C090063D5CF /* GothamRnd-Book.otf in Resources */,
+				62A9309D1B5A5C090063D5CF /* GothamRnd-Bold.otf in Resources */,
 				6235E18A1B59F5590055E746 /* Main.storyboard in Resources */,
 				6235E18F1B59F5590055E746 /* LaunchScreen.xib in Resources */,
+				6216FF171B5A640E005C8FEE /* sun.png in Resources */,
+				6216FF181B5A640E005C8FEE /* clouds.png in Resources */,
+				6216FF191B5A640E005C8FEE /* screen1_Grid copy 5.png in Resources */,
 				6235E18C1B59F5590055E746 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,9 +432,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PantsOrNoPants/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -381,9 +445,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PantsOrNoPants/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
