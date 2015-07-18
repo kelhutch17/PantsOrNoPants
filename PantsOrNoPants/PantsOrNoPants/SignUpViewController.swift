@@ -9,18 +9,20 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
+    @IBOutlet weak var backgroundImage: UIImageView!
     
     let requestHandler = RequestHandler()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.sendSubviewToBack(self.backgroundImage)
+    }
     
     func handler(response: NSURLResponse!, data: NSData!, error: NSError!) {
 
     }
     
     @IBAction func signupSubmit(sender: AnyObject) {
-        requestHandler.sendRequest("hi", handler)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+        requestHandler.sendRequest("hi", completionHandler: handler)
     }
 }

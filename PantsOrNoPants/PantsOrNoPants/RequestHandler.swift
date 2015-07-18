@@ -62,8 +62,8 @@ extension Dictionary {
     
     func stringFromHttpParameters() -> String {
         let parameterArray = map(self) { (key, value) -> String in
-            let percentEscapedKey = (key as String).stringByAddingPercentEncodingForURLQueryValue()!
-            let percentEscapedValue = (value as String).stringByAddingPercentEncodingForURLQueryValue()!
+            let percentEscapedKey = (key as! String).stringByAddingPercentEncodingForURLQueryValue()!
+            let percentEscapedValue = (value as! String).stringByAddingPercentEncodingForURLQueryValue()!
             return "\(percentEscapedKey)=\(percentEscapedValue)"
         }
         
